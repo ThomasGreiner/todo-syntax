@@ -9,17 +9,17 @@ x x : Task is done
       i.e. it's already done, handled by someone else or impossible to get done
 :TODO
 
+COMP:
++ + : Argument is positive
+o o : Argument is neutral
+- - : Argument is negative
+:COMP
+
 TODO blocks can be inserted anywhere in the text
 - without
 - disrupting
 - regular
 - lists
-
-TODO: Features
-- add way to search for items
-  don't forget to add placeholder to search input box
-x add way to remove items
-:TODO
 
 TODO: Bugs
 ! website is completely broken in Safari

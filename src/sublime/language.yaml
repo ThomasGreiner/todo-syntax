@@ -12,8 +12,8 @@ ticket: &ticket
   comment: Ticket numbers
 
 patterns:
-  - name: todo.block
-    comment: Container
+  - name: todo.block.todo
+    comment: TODO container
     begin: '^(?i:TODO):'
     beginCaptures:
       '0': {name: meta.todo.block}
@@ -22,6 +22,7 @@ patterns:
       '0': {name: meta.todo.block}
     patterns:
       - include: $self
+      
       - name: todo.important
         comment: Important task
         begin: ^\s*(\!)[\t ]
@@ -81,6 +82,44 @@ patterns:
         begin: ^\s*(\#)[\t ]
         beginCaptures:
           '1': {name: meta.todo.impossible}
+        end: \n
+        patterns:
+          - *ticket
+  
+  - name: todo.block.comp
+    comment: Comparison container
+    begin: '^(?i:COMP):'
+    beginCaptures:
+      '0': {name: meta.todo.block}
+    end: '^:(?i:COMP).*\n'
+    endCaptures:
+      '0': {name: meta.todo.block}
+    patterns:
+      - include: $self
+      
+      - name: todo.positive
+        comment: Positive argument
+        begin: ^\s*(\+)[\t ]
+        beginCaptures:
+          '1': {name: meta.todo.positive}
+        end: \n
+        patterns:
+          - *ticket
+      
+      - name: todo.negative
+        comment: Negative argument
+        begin: ^\s*(\-)[\t ]
+        beginCaptures:
+          '1': {name: meta.todo.negative}
+        end: \n
+        patterns:
+          - *ticket
+      
+      - name: todo.neutral
+        comment: Neutral argument
+        begin: ^\s*(o)[\t ]
+        beginCaptures:
+          '1': {name: meta.todo.neutral}
         end: \n
         patterns:
           - *ticket

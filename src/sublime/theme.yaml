@@ -66,6 +66,27 @@ settings:
     settings:
       background: '#567'
   
+  - scope: todo.positive
+    settings:
+      foreground: '#5F5C'
+  - scope: meta.todo.positive
+    settings:
+      background: '#5F5C'
+  
+  - scope: todo.negative
+    settings:
+      foreground: '#F55C'
+  - scope: meta.todo.negative
+    settings:
+      background: '#F55C'
+  
+  - scope: todo.neutral
+    settings:
+      foreground: '#FF5C'
+  - scope: meta.todo.neutral
+    settings:
+      background: '#FF5C'
+  
   - scope: todo.ticket
     settings:
       fontStyle: bold

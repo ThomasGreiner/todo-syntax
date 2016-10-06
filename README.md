@@ -1,14 +1,16 @@
 # TODO file syntax
 
-[Sublime Text 3][st3] syntax definition and color scheme for plain text files containing lists of tasks that need to be done (i.e. ToDos). The Sublime Text color scheme is based on [FreshCut by Dayle Rees][freshcut].
+[Sublime Text 3][st3] syntax definition and color scheme for plain text files containing lists of tasks that need to be done (i.e. ToDos) and pro/con lists. The Sublime Text color scheme is based on [FreshCut by Dayle Rees][freshcut].
 
 ![Sublime Text 3 screenshot](screenshots/sublime.png)
 
 ### Syntax
 
-Start a TODO block using `TODO:`, optionally followed by a title, as its first line. Finally, you can end the TODO block using `:TODO` as the last line.
+Start a block using `NAME:`, optionally followed by a title, as its first line. Finally, you can end the block using `:NAME` as the last line.
 
-Within the TODO block you can add tasks that start with one of the characters below followed by a whitespace:
+Within the block you can add items that start with a character (see below for list) followed by a whitespace.
+
+#### TODO Block
 
 - `!`: Task is open and important
 - `-`: Task is open
@@ -17,6 +19,12 @@ Within the TODO block you can add tasks that start with one of the characters be
 - `/`: Task is blocked and cannot be worked on right now
 - `x`: Task is done
 - `#`: Task cannot be worked on (i.e. it's already done, handled by someone else or impossible to get done)
+
+#### COMP Block
+
+- `+`: Argument is positive
+- `o`: Argument is neutral
+- `-`: Argument is negative
 
 ## Installation
 

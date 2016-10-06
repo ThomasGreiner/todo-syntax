@@ -9,7 +9,6 @@
 <key>fileTypes</key>
 <array>
 <string>todo</string>
-<string>txt</string>
 </array>
 <key>uuid</key>
 <string>71393561-0cbc-44fa-a6aa-565c2ff3d2e8</string>
@@ -18,7 +17,7 @@
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -26,9 +25,9 @@
 <array>
 <dict>
 <key>name</key>
-<string>todo.block</string>
+<string>todo.block.todo</string>
 <key>comment</key>
-<string>Container</string>
+<string>TODO container</string>
 <key>begin</key>
 <string>^(?i:TODO):</string>
 <key>beginCaptures</key>
@@ -75,14 +74,10 @@
 <key>patterns</key>
 <array>
 <dict>
-<key>include</key>
-<string>$self</string>
-</dict>
-<dict>
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -108,14 +103,10 @@
 <key>patterns</key>
 <array>
 <dict>
-<key>include</key>
-<string>$self</string>
-</dict>
-<dict>
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -141,14 +132,10 @@
 <key>patterns</key>
 <array>
 <dict>
-<key>include</key>
-<string>$self</string>
-</dict>
-<dict>
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -174,14 +161,10 @@
 <key>patterns</key>
 <array>
 <dict>
-<key>include</key>
-<string>$self</string>
-</dict>
-<dict>
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -207,14 +190,10 @@
 <key>patterns</key>
 <array>
 <dict>
-<key>include</key>
-<string>$self</string>
-</dict>
-<dict>
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -240,14 +219,10 @@
 <key>patterns</key>
 <array>
 <dict>
-<key>include</key>
-<string>$self</string>
-</dict>
-<dict>
 <key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
@@ -273,14 +248,130 @@
 <key>patterns</key>
 <array>
 <dict>
+<key>name</key>
+<string>todo.ticket</string>
+<key>match</key>
+<string>#\d+</string>
+<key>comment</key>
+<string>Ticket numbers</string>
+</dict>
+</array>
+</dict>
+</array>
+</dict>
+<dict>
+<key>name</key>
+<string>todo.block.comp</string>
+<key>comment</key>
+<string>Comparison container</string>
+<key>begin</key>
+<string>^(?i:COMP):</string>
+<key>beginCaptures</key>
+<dict>
+<key>0</key>
+<dict>
+<key>name</key>
+<string>meta.todo.block</string>
+</dict>
+</dict>
+<key>end</key>
+<string>^:(?i:COMP).*\n</string>
+<key>endCaptures</key>
+<dict>
+<key>0</key>
+<dict>
+<key>name</key>
+<string>meta.todo.block</string>
+</dict>
+</dict>
+<key>patterns</key>
+<array>
+<dict>
 <key>include</key>
 <string>$self</string>
 </dict>
 <dict>
 <key>name</key>
+<string>todo.positive</string>
+<key>comment</key>
+<string>Positive argument</string>
+<key>begin</key>
+<string>^\s*(\+)[\t ]</string>
+<key>beginCaptures</key>
+<dict>
+<key>1</key>
+<dict>
+<key>name</key>
+<string>meta.todo.positive</string>
+</dict>
+</dict>
+<key>end</key>
+<string>\n</string>
+<key>patterns</key>
+<array>
+<dict>
+<key>name</key>
 <string>todo.ticket</string>
 <key>match</key>
-<string>\#\d+</string>
+<string>#\d+</string>
+<key>comment</key>
+<string>Ticket numbers</string>
+</dict>
+</array>
+</dict>
+<dict>
+<key>name</key>
+<string>todo.negative</string>
+<key>comment</key>
+<string>Negative argument</string>
+<key>begin</key>
+<string>^\s*(\-)[\t ]</string>
+<key>beginCaptures</key>
+<dict>
+<key>1</key>
+<dict>
+<key>name</key>
+<string>meta.todo.negative</string>
+</dict>
+</dict>
+<key>end</key>
+<string>\n</string>
+<key>patterns</key>
+<array>
+<dict>
+<key>name</key>
+<string>todo.ticket</string>
+<key>match</key>
+<string>#\d+</string>
+<key>comment</key>
+<string>Ticket numbers</string>
+</dict>
+</array>
+</dict>
+<dict>
+<key>name</key>
+<string>todo.neutral</string>
+<key>comment</key>
+<string>Neutral argument</string>
+<key>begin</key>
+<string>^\s*(o)[\t ]</string>
+<key>beginCaptures</key>
+<dict>
+<key>1</key>
+<dict>
+<key>name</key>
+<string>meta.todo.neutral</string>
+</dict>
+</dict>
+<key>end</key>
+<string>\n</string>
+<key>patterns</key>
+<array>
+<dict>
+<key>name</key>
+<string>todo.ticket</string>
+<key>match</key>
+<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
 </dict>
