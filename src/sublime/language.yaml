@@ -8,16 +8,16 @@ uuid: 71393561-0cbc-44fa-a6aa-565c2ff3d2e8
 # Define variables
 ticket: &ticket
   name: todo.ticket
-  match: '#\d+'
   comment: Ticket numbers
+  match: '#\d+'
 
 patterns:
   - name: todo.block.todo
     comment: TODO container
-    begin: '^(?i:TODO):'
+    begin: '\s*(?i:TODO):'
     beginCaptures:
       '0': {name: meta.todo.block}
-    end: '^:(?i:TODO).*\n'
+    end: ':(?i:TODO)\s*'
     endCaptures:
       '0': {name: meta.todo.block}
     patterns:
@@ -88,10 +88,10 @@ patterns:
   
   - name: todo.block.comp
     comment: Comparison container
-    begin: '^(?i:COMP):'
+    begin: '\s*(?i:COMP):'
     beginCaptures:
       '0': {name: meta.todo.block}
-    end: '^:(?i:COMP).*\n'
+    end: ':(?i:COMP)\s*'
     endCaptures:
       '0': {name: meta.todo.block}
     patterns:
