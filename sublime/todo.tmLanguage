@@ -16,10 +16,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 <key>patterns</key>
 <array>
@@ -29,7 +29,7 @@
 <key>comment</key>
 <string>TODO container</string>
 <key>begin</key>
-<string>^(?i:TODO):</string>
+<string>\s*(?i:TODO):</string>
 <key>beginCaptures</key>
 <dict>
 <key>0</key>
@@ -39,7 +39,7 @@
 </dict>
 </dict>
 <key>end</key>
-<string>^:(?i:TODO).*\n</string>
+<string>:(?i:TODO)\s*</string>
 <key>endCaptures</key>
 <dict>
 <key>0</key>
@@ -76,10 +76,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -105,10 +105,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -134,10 +134,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -163,10 +163,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -192,10 +192,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -221,10 +221,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -250,10 +250,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -265,7 +265,7 @@
 <key>comment</key>
 <string>Comparison container</string>
 <key>begin</key>
-<string>^(?i:COMP):</string>
+<string>\s*(?i:COMP):</string>
 <key>beginCaptures</key>
 <dict>
 <key>0</key>
@@ -275,7 +275,7 @@
 </dict>
 </dict>
 <key>end</key>
-<string>^:(?i:COMP).*\n</string>
+<string>:(?i:COMP)\s*</string>
 <key>endCaptures</key>
 <dict>
 <key>0</key>
@@ -312,10 +312,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -341,10 +341,10 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
 </dict>
@@ -370,12 +370,45 @@
 <dict>
 <key>name</key>
 <string>todo.ticket</string>
-<key>match</key>
-<string>#\d+</string>
 <key>comment</key>
 <string>Ticket numbers</string>
+<key>match</key>
+<string>#\d+</string>
 </dict>
 </array>
+</dict>
+</array>
+</dict>
+<dict>
+<key>name</key>
+<string>todo.block.code.js</string>
+<key>comment</key>
+<string>Embedded JavaScript code</string>
+<key>begin</key>
+<string>\s*(?i:JS):</string>
+<key>beginCaptures</key>
+<dict>
+<key>0</key>
+<dict>
+<key>name</key>
+<string>meta.todo.block</string>
+</dict>
+</dict>
+<key>end</key>
+<string>:(?i:JS)\s*</string>
+<key>endCaptures</key>
+<dict>
+<key>0</key>
+<dict>
+<key>name</key>
+<string>meta.todo.block</string>
+</dict>
+</dict>
+<key>patterns</key>
+<array>
+<dict>
+<key>include</key>
+<string>source.js</string>
 </dict>
 </array>
 </dict>

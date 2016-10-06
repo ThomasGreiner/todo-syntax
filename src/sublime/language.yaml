@@ -123,3 +123,14 @@ patterns:
         end: \n
         patterns:
           - *ticket
+  
+  - name: todo.block.code.js
+    comment: Embedded JavaScript code
+    begin: '\s*(?i:JS):'
+    beginCaptures:
+      '0': {name: meta.todo.block}
+    end: ':(?i:JS)\s*'
+    endCaptures:
+      '0': {name: meta.todo.block}
+    patterns:
+      - include: source.js

@@ -14,6 +14,9 @@ settings:
   - scope: meta.todo.block
     settings:
       foreground: '#333'
+  - scope: todo.block.code
+    settings:
+      foreground: '#FFF'
   
   - scope: todo.important
     settings:

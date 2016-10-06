@@ -23,6 +23,7 @@ TODO blocks can be inserted anywhere in the text
 
 TODO: Bugs
 ! website is completely broken in Safari
+  run js:window.safari.fix():js to fix it
 o removing items doesn't work
   o fix: item not removed from database
   x fix: item not removed from view

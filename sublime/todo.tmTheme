@@ -377,6 +377,15 @@
 </dict>
 <dict>
 <key>scope</key>
+<string>todo.block.code</string>
+<key>settings</key>
+<dict>
+<key>foreground</key>
+<string>#FFF</string>
+</dict>
+</dict>
+<dict>
+<key>scope</key>
 <string>todo.important</string>
 <key>settings</key>
 <dict>
