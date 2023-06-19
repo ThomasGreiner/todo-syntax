@@ -10,6 +10,11 @@ settings:
     settings:
       background: '#FFFFFF05'
       foreground: '#FFF4'
+  - scope: todo.comp
+    settings:
+      background: '#FFFFFF05'
+      foreground: '#FFF4'
+  
   - scope: meta.todo.block
     settings:
       foreground: '#333'
@@ -57,6 +62,22 @@ settings:
   - scope: meta.todo.impossible
     settings:
       background: '#567'
+  
+  - scope: todo.positive
+    settings:
+      foreground: '#5F5A'
+      background: '#5F52'
+  - scope: meta.todo.positive
+    settings:
+      background: '#5F5A'
+  - scope: todo.negative
+    settings:
+      foreground: '#F55A'
+      background: '#F552'
+  - scope: meta.todo.negative
+    settings:
+      background: '#F55A'
+  
   - scope: todo.ticket
     settings:
       fontStyle: bold

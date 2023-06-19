@@ -6,6 +6,8 @@
 
 ### Syntax
 
+#### TODO Block
+
 Start a TODO block using `TODO:`, optionally followed by a title, as its first line. Finally, you can end the TODO block using `:TODO` as the last line.
 
 Within the TODO block you can add tasks that start with one of the characters below followed by a whitespace:
@@ -17,6 +19,16 @@ Within the TODO block you can add tasks that start with one of the characters be
 - `/`: Task is blocked and cannot be worked on right now
 - `x`: Task is done
 - `#`: Task cannot be worked on (i.e. it's already done, handled by someone else or impossible to get done)
+
+#### COMP Block
+
+Start a comparison block using `TODO:` optionally followed by a title, as its first line. Finally, you can end the block using `:TODO` as the last line.
+
+Within the comparison block you can add pros and cons with one of the characters below followed by a whitespace:
+
+- `+`: Pro argument
+- `-`: Contra argument
+- `?`: Uncertain argument
 
 ## Installation
 
